@@ -7,8 +7,8 @@ import CostumTextInput from '../components/CostumTextInput';
 import navigationServices from '../helper/navigationServices';
 import Loading from '../components/Loading';
 //import console = require("console");
-// import { resolve } from "url";
-// import { rejects } from "assert";
+//import { resolve } from "url";
+//import { reject } from "assert";
 
 const validateFormik = yup.object().shape({
     email:yup
@@ -47,7 +47,7 @@ const FormLogin = () => {
                 email:"",
                 password:""
             }}
-            onsubmit={(values, actions) => {
+            onSubmit={(values, actions) => {
                 _doLogin({email:values.email, password:values.password})
                 .then( async()=> {
                     const userData = {nama:'User1', email:values.email}
