@@ -12,7 +12,7 @@ const CostumTextInput = ({label, nameTxtInput, formikProps, ...rest}) => {
             <TextInput
                 style= {{borderWidth:1, borderColor:'steelblue', padding:5}}
                 onChangeText= {formikProps.handleChange(nameTxtInput)}
-                value= {formikProps.value[nameTxtInput]}
+                value= {formikProps.values[nameTxtInput]}
                 onBlur={formikProps.handleBlur(nameTxtInput)}
                 {...rest}
             />
