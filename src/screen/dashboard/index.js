@@ -1,7 +1,8 @@
 import React from 'react';
 import ProfileScreen from './ProfileScreen';
 import HomeScreen from './HomeScreen';
-import {createBottomTabNavigator} from 'react-navigation';
+import TopbarStack from '../../Home_Page/index';
+import {createBottomTabNavigator, createMaterialTopTabNavigator} from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const bottomTabNavigatorConfig = {
@@ -29,10 +30,11 @@ const bottomTabNavigatorConfig = {
     })
 }
 
-export default createBottomTabNavigator ({
-    HOME: {
-        screen: HomeScreen
-    },
+const _DashboardBottomTab = createBottomTabNavigator ({
+    HOME:TopbarStack,
+        // screen: HomeScreen
+        
+    
     PROFILE:{
         screen:ProfileScreen
     }
@@ -40,3 +42,4 @@ export default createBottomTabNavigator ({
     tabBarOptions:bottomTabNavigatorConfig.tabBarOptions,
     defaultNavigationOptions:bottomTabNavigatorConfig.defNavOpts
 })
+ export default _DashboardBottomTab;
