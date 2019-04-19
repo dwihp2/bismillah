@@ -50,7 +50,7 @@ const FormLogin = () => {
             onSubmit={(values, actions) => {
                 _doLogin({email:values.email, password:values.password})
                 .then( async()=> {
-                    const userData = {nama:'User1', email:values.email}
+                    const userData = {nama:'Administrator', email:values.email}
                     try{
                         await AsyncStorage.setItem("@USER_DATA",JSON.stringify(userData));
                         navigationServices.navigate("DASHBOARD");
