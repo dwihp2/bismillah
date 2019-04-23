@@ -1,9 +1,12 @@
 package com.bismillah;
 
 import android.app.Application;
-
+//mapbox import
+import com.mapbox.rctmgl.RCTMGLPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.oblador.vectoricons.VectorIconsPackage;
+import com.facebook.react.module.annotation.ReactModule;
+// import android.support.annotation.NonNull;
 
 import com.facebook.react.ReactApplication;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
@@ -11,9 +14,6 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
-
-
-
 
 import java.util.Arrays;
 import java.util.List;
@@ -32,16 +32,20 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
             new RNGestureHandlerPackage(),
             new MainReactPackage(),
-            new VectorIconsPackage()
-            ,new AsyncStoragePackage()
+            new AsyncStoragePackage(),
+            new RCTMGLPackage(),
+            new VectorIconsPackage()             
+            
       );
     }
+
 
     @Override
     protected String getJSMainModuleName() {
       return "index";
     }
   };
+ 
 
   @Override
   public ReactNativeHost getReactNativeHost() {
