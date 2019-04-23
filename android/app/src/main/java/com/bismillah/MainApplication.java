@@ -5,7 +5,7 @@ import android.app.Application;
 import com.mapbox.rctmgl.RCTMGLPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.oblador.vectoricons.VectorIconsPackage;
-import com.facebook.react.module.annotation.ReactModule;
+// import com.facebook.react.module.annotation.ReactModule;
 // import android.support.annotation.NonNull;
 
 import com.facebook.react.ReactApplication;
